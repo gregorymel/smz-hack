@@ -1,10 +1,11 @@
 const crypto = require('crypto');
 const fetch = require('node-fetch');
-const sign = crypto.createSign('SHA256');
 const config = require('../configs');
 const { uuid } = require('uuidv4');
 
 function createSignature(method, uri, data) {
+    const sign = crypto.createSign('SHA256');
+
     const dataToSign = `${method}\n${uri}\n${data}`;
     sign.write(dataToSign);
     sign.end();
