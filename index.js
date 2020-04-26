@@ -13,7 +13,7 @@ app.use(cors());
 
 app.use(bodyParser.json());
 
-app.get('/get_status', async (req, res) => {
+app.post('/get_status', async (req, res) => {
     const inn = req.body['inn'];
 
     const token = await smz.getAuthToken(config.username, config.password, config.clientId);
