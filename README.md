@@ -38,7 +38,7 @@ Bind user to the partner's app using user's individual tax number
 </p>
 </details>
 <details>
-  <summary>smz.bindPartner</summary>
+  <summary>smz.getAuthToken</summary>
 <p>
   
 #### smz.getAuthToken(username, password, clientId);
@@ -71,3 +71,24 @@ const payloadStatus = await waitRequest(token, ruid);
 - Returns response body
 
 Wait for the reuest status change.
+
+
+</p>
+</details>
+<details>
+  <summary>hashconnect.createPaymentLink</summary>
+<p>
+  
+#### hashconnect.createPaymentLink(siteId, ruid, pageParameters, price)
+
+```js
+const url = await createPaymentLink(siteId, ruid, pageParams, price);
+```
+- `siteId` String. Unique identifier (shoud be given by Hashconnect) 
+- `pageParams` String. Links where user should be redirected from the payment page
+- `price` String. Price of the deal
+- `ruid` String. Unique request identifier.
+
+- Returns payment link
+
+Creates payment and returns url where user should redirected.
