@@ -3,7 +3,7 @@ Api for SMZ and hashconnect
 
 Run server locally```node index.js```
 
-Server uses API mentioned below: 
+Server uses API mentioned below (see ```./src``` directory for more details): 
 
 ## API Reference
 <details>
