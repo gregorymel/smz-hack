@@ -1,6 +1,10 @@
 # smz-hack 
 Api for SMZ and hashconnect
 
+Run server locally```node index.js```
+
+Server uses API mentioned below: 
+
 ## API Reference
 <details>
   <summary>smz.getStatus</summary>
